@@ -1,6 +1,6 @@
 {
   "name": "base2048",
-  "version": "0.0.2050",
+  "version": "0.0.2051",
   "description": "Binary encoding optimised for long Twitter",
   "main": "index.js",
   "scripts": {
