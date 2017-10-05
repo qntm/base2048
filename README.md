@@ -27,10 +27,10 @@ console.log(uint8Array2[0]) // 1
 console.log(uint8Array2[1]) // 2
 console.log(uint8Array2[2]) // 4
 console.log(uint8Array2[3]) // 8
-console.log(uint8Array2[4]) // 1
-console.log(uint8Array2[5]) // 2
-console.log(uint8Array2[6]) // 4
-console.log(uint8Array2[7]) // 8
+console.log(uint8Array2[4]) // 16
+console.log(uint8Array2[5]) // 32
+console.log(uint8Array2[6]) // 64
+console.log(uint8Array2[7]) // 128
 ```
 
 ## API
