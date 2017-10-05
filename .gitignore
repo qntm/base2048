@@ -45,3 +45,6 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# WHY ISN'T THIS HERE BY DEFAULT
+node_modules

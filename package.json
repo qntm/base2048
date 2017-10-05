@@ -1,0 +1,22 @@
+{
+  "name": "base2048",
+  "version": "0.0.2049",
+  "description": "Binary encoding optimised for long Twitter",
+  "main": "index.js",
+  "scripts": {
+    "standard": "standard",
+    "test": "node test.js"
+  },
+  "keywords": [
+    "encoding",
+    "binary",
+    "twitter",
+    "base65536",
+    "unicode"
+  ],
+  "author": "qntm",
+  "license": "MIT",
+  "devDependencies": {
+    "standard": "^10.0.3"
+  }
+}
