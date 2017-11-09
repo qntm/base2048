@@ -77,7 +77,7 @@ Base2048 is an 11-bit encoding. We take the input binary data as a sequence of 8
 
 Note that the final 11-bit number in the sequence is likely to be "incomplete", i.e. missing some of its bits. We need to signal this fact in the output string somehow. Here's how we handle those cases.
 
-#### Final 11-bit number has 1 to 7 missing bits
+#### Final 11-bit number has 1 to 7 bits missing
 
 In the following cases:
 
@@ -101,7 +101,7 @@ we pad the incomplete 11-bit number out to 11 bits using 1s:
 
 and then encode as normal using our 2<sup>11</sup>-bit repertoire.
 
-#### Final 11-bit number has 8 to 10 missing bits
+#### Final 11-bit number has 8 to 10 bits missing
 
 In the following cases:
 
