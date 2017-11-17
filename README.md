@@ -67,7 +67,7 @@ Base2048 was developed under the assumption that most people will not go to the 
 
 ## Code point safety
 
-For Base65536, there were some interesting questions relating to "unsafe" code points (unassigned code points, control characters, whitespace, combining diacritics, ...) and Unicode normalization in transit. However, [this is more or less a solved problem](https://github.com/qntm/base65536gen) at this point and it was just a matter of modifying that code a little to return different results.
+Base2048 uses only ["safe" Unicode code points](https://qntm.org/safe) (no unassigned code points, no control characters, no whitespace, no combining diacritics, ...). This guarantees that the data sent will remain intact when sent through any "Unicode-clean" text interface.
 
 In the available space of 4,352 light code points, there are 2,343 safe code points. For Base2048, since I felt it improved the character repertoire, I further ruled out the four "Symbol" General Categories, leaving 2,212 safe code points, and the "Letter, Modifier" General Category, leaving 2,176 safe code points. From these I chose 2<sup>11</sup> = 2048 code points for the primary repertoire and 2<sup>3</sup> = 8 additional code points to use as padding characters.
 
@@ -77,7 +77,7 @@ Base2048 is an 11-bit encoding. We take the input binary data as a sequence of 8
 
 Note that the final 11-bit number in the sequence is likely to be "incomplete", i.e. missing some of its bits. We need to signal this fact in the output string somehow. Here's how we handle those cases.
 
-#### Final 11-bit number has 1 to 7 missing bits
+#### Final 11-bit number has 1 to 7 bits missing
 
 In the following cases:
 
@@ -101,7 +101,7 @@ we pad the incomplete 11-bit number out to 11 bits using 1s:
 
 and then encode as normal using our 2<sup>11</sup>-bit repertoire.
 
-#### Final 11-bit number has 8 to 10 missing bits
+#### Final 11-bit number has 8 to 10 bits missing
 
 In the following cases:
 
