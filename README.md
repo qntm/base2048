@@ -107,7 +107,7 @@ Base2048 is a binary encoding optimised for transmitting data through Twitter. T
 </table>
 
 \* New-style "long" Tweets, up to 280 Unicode characters give or take Twitter's complex "weighting" calculation.<br/>
-† Base85 is listed for completeness but all variants use characters which are considered hazardous for general use in text: blackslashes, escape characters, brackets, punctuation *etc.*.<br/>
+† Base85 is listed for completeness but all variants use characters which are considered hazardous for general use in text: escape characters, brackets, punctuation *etc.*.<br/>
 ‡ Base131072 is a work in progress, not yet ready for general use.<br/>
 
 ## Installation
