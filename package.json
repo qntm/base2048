@@ -1,6 +1,6 @@
 {
   "name": "base2048",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Binary encoding optimised for Twitter",
   "module": "dist/es6/base2048.js",
   "main": "dist/cjs/base2048.js",
