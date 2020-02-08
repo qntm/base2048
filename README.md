@@ -123,8 +123,7 @@ import { encode, decode } from 'base2048'
 
 const uint8Array = new Uint8Array([1, 2, 4, 8, 16, 32, 64, 128])
 const str = encode(uint8Array)
-console.log(str)
-
+console.log(str) // 'GƸOʜeҩ'
 
 const uint8Array2 = decode(str)
 console.log(uint8Array2)
@@ -138,7 +137,7 @@ Load this file in the browser to gain access to a `base32768` global.
 ```html
 <script src="./node_modules/base2048/dist/iife/base32768.js"></script>
 <script>
-  console.log(base2048.decode('怗膹䩈㭴䂊䫁輪黔'))
+  console.log(base2048.decode('GƸOʜeҩ'))
 </script>
 ```
 
