@@ -160,7 +160,7 @@ Decodes a Base2048 `String` and returns a `Uint8Array` containing the original b
 
 ## Rationale
 
-Up until relatively recently, Twitter allowed Tweets to be at most 140 characters. Discounting URLs, which have their own complex rules, Tweet length was computed as the number of Unicode code points in the Tweet — *not* the number of octets in any particular encoding of that Unicode string. In 2015, observing that most existing text-based encodings made negligible use of most of the Unicode code point space (e.g. Base64 encodes only 6 bits per character = 105 octets per Tweet), I developed [Base65536](https://github.com/qntm/base65536), which encodes 16 bits per character = 280 octets per Tweet.
+Originally, Twitter allowed Tweets to be at most 140 characters. Discounting URLs, which have their own complex rules, Tweet length was computed as the number of Unicode code points in the Tweet — *not* the number of octets in any particular encoding of that Unicode string. In 2015, observing that most existing text-based encodings made negligible use of most of the Unicode code point space (e.g. Base64 encodes only 6 bits per character = 105 octets per Tweet), I developed [Base65536](https://github.com/qntm/base65536), which encodes 16 bits per character = 280 octets per Tweet.
 
 On 26 September 2017, Twitter <a href="https://blog.twitter.com/official/en_us/topics/product/2017/Giving-you-more-characters-to-express-yourself.html">announced that</a>
 
