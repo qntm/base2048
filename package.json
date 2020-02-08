@@ -1,11 +1,15 @@
 {
   "name": "base2048",
-  "version": "0.0.2052",
-  "description": "Binary encoding optimised for long Twitter",
-  "main": "index.js",
+  "version": "1.0.0",
+  "description": "Binary encoding optimised for Twitter",
+  "module": "dist/es6/base2048.js",
+  "main": "dist/cjs/base2048.js",
+  "browser": "dist/iife/base2048.js",
   "scripts": {
+    "jest": "jest",
+    "rollup": "rollup",
     "standard": "standard",
-    "test": "node test.js"
+    "test": "standard && jest"
   },
   "keywords": [
     "encoding",
@@ -17,6 +21,18 @@
   "author": "qntm",
   "license": "MIT",
   "devDependencies": {
+    "@babel/preset-env": "^7.8.4",
+    "glob": "^7.1.6",
+    "jest": "^25.1.0",
+    "rollup": "^1.31.0",
     "standard": "^10.0.3"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "standard": {
+    "ignore": "dist"
   }
 }
