@@ -110,6 +110,114 @@ Base2048 is a binary encoding optimised for transmitting data through Twitter. T
 † Base85 is listed for completeness but all variants use characters which are considered hazardous for general use in text: escape characters, brackets, punctuation *etc.*.<br/>
 ‡ Base131072 is a work in progress, not yet ready for general use.<br/>
 
+<table>
+  <thead>
+    <tr>
+      <th colspan="2" rowspan="2">Encoding</th>
+      <th colspan="3">Efficiency</th>
+      <th rowspan="2">Bytes per Tweet *</th>
+    </tr>
+    <tr>
+      <th>UTF&#x2011;8</th>
+      <th>UTF&#x2011;16</th>
+      <th>UTF&#x2011;32</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="5">ASCII&#x2011;constrained</td>
+      <td>Unary / <a href="https://github.com/ferno/base1">Base1</a></td>
+      <td style="text-align: right;">0%</td>
+      <td style="text-align: right;">0%</td>
+      <td style="text-align: right;">0%</td>
+      <td style="text-align: right;">1</td>
+    </tr>
+    <tr>
+      <td>Binary</td>
+      <td style="text-align: right;">13%</td>
+      <td style="text-align: right;">6%</td>
+      <td style="text-align: right;">3%</td>
+      <td style="text-align: right;">35</td>
+    </tr>
+    <tr>
+      <td>Hexadecimal</td>
+      <td style="text-align: right;">50%</td>
+      <td style="text-align: right;">25%</td>
+      <td style="text-align: right;">13%</td>
+      <td style="text-align: right;">140</td>
+    </tr>
+    <tr>
+      <td>Base64</td>
+      <td style="text-align: right;"><strong>75%</strong></td>
+      <td style="text-align: right;">38%</td>
+      <td style="text-align: right;">19%</td>
+      <td style="text-align: right;">210</td>
+    </tr>
+    <tr>
+      <td>Base85 †</td>
+      <td style="text-align: right;">80%</td>
+      <td style="text-align: right;">40%</td>
+      <td style="text-align: right;">20%</td>
+      <td style="text-align: right;">224</td>
+    </tr>
+    <tr>
+      <td rowspan="4">BMP&#x2011;constrained</td>
+      <td><a href="https://github.com/ferno/hexagram-encode">HexagramEncode</a></td>
+      <td style="text-align: right;">25%</td>
+      <td style="text-align: right;">38%</td>
+      <td style="text-align: right;">19%</td>
+      <td style="text-align: right;">105</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/ferno/braille-encode">BrailleEncode</a></td>
+      <td style="text-align: right;">33%</td>
+      <td style="text-align: right;">50%</td>
+      <td style="text-align: right;">25%</td>
+      <td style="text-align: right;">140</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/qntm/base2048">Base2048</a></td>
+      <td style="text-align: right;">56%</td>
+      <td style="text-align: right;">69%</td>
+      <td style="text-align: right;">34%</td>
+      <td style="text-align: right;"><strong>385</strong></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/ferno/base32768">Base32768</a></td>
+      <td style="text-align: right;">63%</td>
+      <td style="text-align: right;"><strong>94%</strong></td>
+      <td style="text-align: right;">47%</td>
+      <td style="text-align: right;">263</td>
+    </tr>
+    <tr>
+      <td rowspan="3">Full Unicode</td>
+      <td><a href="https://github.com/keith-turner/ecoji">Ecoji</a></td>
+      <td style="text-align: right;">31%</td>
+      <td style="text-align: right;">31%</td>
+      <td style="text-align: right;">31%</td>
+      <td style="text-align: right;">175</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/ferno/base65536">Base65536</a></td>
+      <td style="text-align: right;">56%</td>
+      <td style="text-align: right;">64%</td>
+      <td style="text-align: right;"><strong>50%</strong></td>
+      <td style="text-align: right;">280</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/ferno/base131072">Base131072</a> ‡</td>
+      <td style="text-align: right;">53%+</td>
+      <td style="text-align: right;">53%+</td>
+      <td style="text-align: right;">53%</td>
+      <td style="text-align: right;">297</td>
+    </tr>
+  </tbody>
+</table>
+
+\* New-style "long" Tweets, up to 280 Unicode characters give or take Twitter's complex "weighting" calculation.<br/>
+† Base85 is listed for completeness but all variants use characters which are considered hazardous for general use in text: escape characters, brackets, punctuation *etc.*.<br/>
+‡ Base131072 is a work in progress, not yet ready for general use.<br/>
+
 ## Installation
 
 ```bash
