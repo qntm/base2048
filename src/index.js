@@ -1,6 +1,6 @@
 /**
-  Base32768 is a binary-to-text encoding optimised for UTF-16-encoded text.
-  (e.g. Windows, Java, JavaScript)
+  Base2048 is a binary-to-text encoding optimised for transmitting data
+  through Twitter.
 */
 
 'use strict'
