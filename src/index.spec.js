@@ -15,7 +15,7 @@ const expectUint8ArraysEqual = (expected, actual) => {
 
 describe('base2048', () => {
   describe('test data pairs', () => {
-    const binFileNames = glob.sync('./test-data/pairs/**/case0.bin')
+    const binFileNames = glob.sync('./test-data/pairs/**/*.bin')
 
     binFileNames.forEach(fileName => {
       const caseName = fileName.substring(0, fileName.length - '.bin'.length)

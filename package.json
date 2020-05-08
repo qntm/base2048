@@ -1,15 +1,12 @@
 {
   "name": "base2048",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Binary encoding optimised for Twitter",
   "module": "dist/es6/base2048.js",
   "main": "dist/cjs/base2048.js",
-  "browser": "dist/iife/base2048.js",
   "scripts": {
-    "jest": "jest",
     "rollup": "rollup",
-    "standard": "standard",
-    "test": "standard && jest"
+    "test": "npx standard && npx jest"
   },
   "keywords": [
     "encoding",
@@ -25,7 +22,7 @@
     "glob": "^7.1.6",
     "jest": "^25.1.0",
     "rollup": "^1.31.0",
-    "standard": "^10.0.3"
+    "standard": "^14.3.3"
   },
   "babel": {
     "presets": [
