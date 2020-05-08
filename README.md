@@ -135,7 +135,7 @@ console.log(uint8Array2)
 Load this file in the browser to gain access to a `base2048` global.
 
 ```html
-<script src="./node_modules/base2048@1/dist/iife/base2048.js"></script>
+<script src="https://unpkg.com/base2048@1/dist/iife/base2048.js"></script>
 <script>
   console.log(base2048.decode('GƸOʜeҩ'))
 </script>
