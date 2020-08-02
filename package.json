@@ -1,7 +1,12 @@
 {
   "name": "base2048",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Binary encoding optimised for Twitter",
+  "homepage": "https://github.com/qntm/base2048",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/qntm/base2048.git"
+  },
   "module": "dist/es6/base2048.js",
   "main": "dist/cjs/base2048.js",
   "scripts": {
