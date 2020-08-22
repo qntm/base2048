@@ -44,5 +44,8 @@
   },
   "standard": {
     "ignore": "dist"
-  }
+  },
+  "files": [
+    "dist/**/*"
+  ]
 }
