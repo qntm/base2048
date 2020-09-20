@@ -167,7 +167,7 @@ On 26 September 2017, Twitter <a href="https://blog.twitter.com/official/en_us/t
 
 This statement is fairly light on usable details and/or factual accuracy. However, following some experimentation and examination of the new web client code, we now understand that maximum Tweet length is indeed 280 Unicode code points, *except that code points U+1100 HANGUL CHOSEONG KIYEOK upwards now count double*.
 
-Effectively, Unicode is now divided into 4,352 "light" code points (U+0000 to U+10FF inclusive) and 1,109,760 "heavy" code points (U+1100 to U+10FFFF inclusive).
+Effectively, Twitter divides Unicode into 4,352 "light" code points (U+0000 to U+10FF inclusive) and 1,109,760 "heavy" code points (U+1100 to U+10FFFF inclusive).
 
 Base65536 *solely* uses heavy characters, which means that a new "long" Tweet can still only contain at most 140 characters of Base65536, encoding 280 octets. This seemed like an imperfect state of affairs to me, and so here we are.
 
