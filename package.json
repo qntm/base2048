@@ -34,7 +34,7 @@
     "glob": "^7.1.6",
     "jest": "^26.4.0",
     "rollup": "^2.26.0",
-    "standard": "^15.0.0",
+    "standard": "^16.0.1",
     "start-server-and-test": "^1.11.3"
   },
   "babel": {
