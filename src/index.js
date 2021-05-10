@@ -10,10 +10,10 @@
 const BITS_PER_CHAR = 11 // Base2048 is an 11-bit encoding
 const BITS_PER_BYTE = 8
 
-// Compressed representation of inclusive-exclusive ranges of characters used in this encoding.
+// Compressed representation of inclusive ranges of characters used in this encoding.
 const pairStrings = [
-  '8:A[a{ÆÇÐÑØÙÞàæçðñøùþÿĐĒĦĨıĲĸĹŁŃŊŌŒŔŦŨƀƠƢƯƱǄǝǞǤǦǶǸȜȞȠȦȴʰͰʹͶ͸ͻ;Ϳ΀Α΢ΣΪαϊϏϐϗϰϳϴϷϹϺЀЂЃЄЇЈЌЏЙКйкѐђѓєїјќџѶѸ҂ҊӁӃӐӔӖӘӚӠӢӨӪӶӸӺ԰Ա՗աևא׫װ׳ؠآاـفً٠٪ٮٰٱٵٹۀہۂۃۓەۖۮ۽ۿ܀ܐܑܒܰݍަޱ޲߀߫ࠀࠖࡀ࡙ࡠ࡫ࢠࢵࢶࢾऄऩपऱलऴवऺऽाॐ॑ॠॢ०॰ॲঁঅ঍এ঑ও঩প঱ল঳শ঺ঽাৎ৏ৠৢ০৲৴৺ৼ৽ਅ਋ਏ਑ਓ਩ਪ਱ਲਲ਼ਵਸ਼ਸ਺ੜ੝੦ੰੲੵઅ઎એ઒ઓ઩પ઱લ઴વ઺ઽાૐ૑ૠૢ૦૰ૹૺଅ଍ଏ଑ଓ଩ପ଱ଲ଴ଵ଺ଽାୟୢ୦୰ୱ୸ஃ஄அ஋எ஑ஒஔக஖ங஛ஜ஝ஞ஠ண஥ந஫ம஺ௐ௑௦௳అ఍ఎ఑ఒ఩ప఺ఽాౘ౛ౠౢ౦౰౸౿ಀಁಅ಍ಎ಑ಒ಩ಪ಴ವ಺ಽಾೞ೟ೠೢ೦೰ೱೳഅ഍എ഑ഒ഻ഽാൎ൏ൔൗ൘ൢ൦൹ൺ඀අ඗ක඲ඳ඼ල඾ව෇෦෰กัาำเๆ๐๚ກ຃ຄ຅ງຉຊ຋ຍຎດຘນຠມ຤ລ຦ວຨສຬອັາຳຽ຾ເ໅໐໚ໞ໠ༀ༁༠༴ཀགྷང཈ཉཌྷཎདྷནབྷམཛྷཝཀྵཪ཭ྈྍကဦဧါဿ၊ၐၖ',
-  '08'
+  '89AZazÆÆÐÐØØÞßææððøøþþĐđĦħııĸĸŁłŊŋŒœŦŧƀƟƢƮƱǃǝǝǤǥǶǷȜȝȠȥȴʯͰͳͶͷͻͽͿͿΑΡΣΩαωϏϏϗϯϳϳϷϸϺϿЂЂЄІЈЋЏИКикяђђєіјћџѵѸҁҊӀӃӏӔӕӘәӠӡӨөӶӷӺԯԱՖաֆאתװײؠءاؿفي٠٩ٮٯٱٴٹڿہہۃےەەۮۼۿۿܐܐܒܯݍޥޱޱ߀ߪࠀࠕࡀࡘࡠࡪࢠࢴࢶࢽऄनपरलळवहऽऽॐॐॠॡ०९ॲঀঅঌএঐওনপরললশহঽঽৎৎৠৡ০ৱ৴৹ৼৼਅਊਏਐਓਨਪਰਲਲਵਵਸਹੜੜ੦੯ੲੴઅઍએઑઓનપરલળવહઽઽૐૐૠૡ૦૯ૹૹଅଌଏଐଓନପରଲଳଵହଽଽୟୡ୦୯ୱ୷ஃஃஅஊஎஐஒஓககஙசஜஜஞடணதநபமஹௐௐ௦௲అఌఎఐఒనపహఽఽౘౚౠౡ౦౯౸౾ಀಀಅಌಎಐಒನಪಳವಹಽಽೞೞೠೡ೦೯ೱೲഅഌഎഐഒഺഽഽൎൎൔൖ൘ൡ൦൸ൺൿඅඖකනඳරලලවෆ෦෯กะาาเๅ๐๙ກຂຄຄງຈຊຊຍຍດທນຟມຣລລວວສຫອະາາຽຽເໄ໐໙ໞໟༀༀ༠༳ཀགངཇཉཌཎདནབམཛཝཨཪཬྈྌကဥဧဪဿ၉ၐၕ',
+  '07'
 ]
 
 const lookupE = {}
@@ -24,7 +24,7 @@ pairStrings.forEach((pairString, r) => {
   pairString.match(/../gu).forEach(pair => {
     const first = pair.codePointAt(0)
     const last = pair.codePointAt(1)
-    for (let codePoint = first; codePoint < last; codePoint++) {
+    for (let codePoint = first; codePoint <= last; codePoint++) {
       encodeRepertoire.push(String.fromCodePoint(codePoint))
     }
   })
