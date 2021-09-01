@@ -130,17 +130,6 @@ console.log(uint8Array2)
 // [1, 2, 4, 8, 16, 32, 64, 128]
 ```
 
-### In the browser
-
-Load this file in the browser to gain access to a `base2048` global.
-
-```html
-<script src="https://unpkg.com/base2048@1/dist/iife/base2048.js"></script>
-<script>
-  console.log(base2048.decode('GƸOʜeҩ'))
-</script>
-```
-
 ## API
 
 `base2048` accepts and returns `Uint8Array`s. Note that every Node.js `Buffer` is a `Uint8Array`. A `Uint8Array` can be converted to a Node.js `Buffer` like so:

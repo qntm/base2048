@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Base2048</title>
+
+    <!-- creates globals `encode` and `decode` -->
+    <script type="module">
+      import { encode, decode } from '../src/index.js'
+      const encoded = encode(new TextEncoder('utf-8').encode('ahoy there'))
+      const decoded = new TextDecoder('utf-8').decode(decode(encoded))
+      document.querySelector('.root').appendChild(document.createTextNode(decoded))
+    </script>
+  </head>
+  <body>
+    <div class="root"></div>
+  </body>
+</html>
