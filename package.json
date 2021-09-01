@@ -1,6 +1,6 @@
 {
   "name": "base2048",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Binary encoding optimised for Twitter",
   "homepage": "https://github.com/qntm/base2048",
   "repository": {
