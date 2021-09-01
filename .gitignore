@@ -48,6 +48,4 @@ Temporary Items
 
 # WHY ISN'T THIS HERE BY DEFAULT
 node_modules
-dist
 coverage
-package-lock.json
