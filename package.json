@@ -8,14 +8,13 @@
     "url": "git://github.com/qntm/base2048.git"
   },
   "type": "module",
-  "main": "src",
+  "main": "src/index.js",
   "types": "typings/index.d.ts",
   "scripts": {
-    "cypress": "start-server-and-test \"node server/server.js\" http://localhost:3000/server/index.html \"cypress run\"",
+    "mocha": "c8 --100 mocha",
     "postpublish": "npm version patch && git push",
-    "jest": "cross-env NODE_OPTIONS=--experimental-vm-modules npx jest --coverage --transform {} --testPathIgnorePatterns cypress",
     "standard": "standard",
-    "test": "npm run standard && npm run jest && npm run cypress"
+    "test": "npm run standard && npm run mocha"
   },
   "keywords": [
     "encoding",
@@ -26,29 +25,13 @@
   "author": "qntm",
   "license": "MIT",
   "devDependencies": {
-    "@babel/eslint-parser": "^7.15.0",
-    "@babel/node": "^7.10.5",
-    "@babel/preset-env": "^7.8.4",
-    "cross-env": "^7.0.3",
-    "cypress": "^8.3.1",
-    "express": "^4.17.1",
-    "glob": "^7.1.6",
-    "jest": "^27.0.3",
+    "c8": "^7.10.0",
+    "mocha": "^9.1.3",
     "safe-code-point": "^3.0.0",
-    "standard": "^16.0.1",
-    "start-server-and-test": "^1.11.3"
-  },
-  "babel": {
-    "presets": [
-      "@babel/preset-env"
-    ]
-  },
-  "standard": {
-    "parser": "@babel/eslint-parser"
+    "standard": "^16.0.1"
   },
   "files": [
     "src",
-    "!*.spec.js",
     "typings"
   ]
 }
