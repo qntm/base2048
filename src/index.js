@@ -3,8 +3,6 @@
   through Twitter.
 */
 
-'use strict'
-
 // Z is a number, usually a uint11 but sometimes a uint3
 
 const BITS_PER_CHAR = 11 // Base2048 is an 11-bit encoding
