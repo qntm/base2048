@@ -136,3 +136,11 @@ export const decode = str => {
 
   return new Uint8Array(uint8Array.buffer, 0, numUint8s)
 }
+
+export const encodeFromString = str => {
+  return encode(new TextEncoder().encode(str))
+}
+
+export const decodeToString = str => {
+  return new TextDecoder().decode(decode(str))
+}
