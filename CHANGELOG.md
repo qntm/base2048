@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 3.x.x
+
+Support is dropped for Node.js 14, 16 and 18.
+
 ## 2.x.x
 
 `base2048` now ships as JavaScript ("ES6") modules, not CommonJS modules. The package has `"type": "module"`. Additionally a separate IIFE for browser use is no longer distributed.
