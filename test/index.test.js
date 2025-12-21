@@ -2,7 +2,7 @@
 
 import assert from 'assert'
 import fs from 'fs'
-import glob from 'glob'
+import { glob } from 'glob'
 
 import { encode, decode } from '../src/index.js'
 
