@@ -1,7 +1,7 @@
 /* eslint-env mocha */
 
-import assert from 'assert'
-import fs from 'fs'
+import assert from 'node:assert/strict'
+import fs from 'node:fs'
 import { glob } from 'glob'
 
 import { encode, decode } from '../src/index.js'
@@ -17,10 +17,10 @@ describe('base2048', () => {
       it(caseName, () => {
         const uint8Array = new Uint8Array(fs.readFileSync(caseName + '.bin'))
         const text = fs.readFileSync(caseName + '.txt', 'utf8')
-        assert.deepStrictEqual(encode(uint8Array), text)
-        assert.deepStrictEqual(decode(text), uint8Array)
+        assert.deepEqual(encode(uint8Array), text)
+        assert.deepEqual(decode(text), uint8Array)
         forms.forEach(form => {
-          assert.deepStrictEqual(text.normalize(form), text)
+          assert.deepEqual(text.normalize(form), text)
         })
       })
     })
@@ -54,7 +54,7 @@ describe('base2048', () => {
             uint8Array[i] = fillUint8
           }
 
-          assert.deepStrictEqual(uint8Array, decode(encode(uint8Array)))
+          assert.deepEqual(uint8Array, decode(encode(uint8Array)))
         })
       })
     }
@@ -66,6 +66,6 @@ describe('base2048', () => {
     const str = encode(uint8Array)
     const uint8Array2 = decode(str)
     const ascii2 = String.fromCharCode(...uint8Array2)
-    assert.deepStrictEqual(ascii2, 'some ASCII text')
+    assert.deepEqual(ascii2, 'some ASCII text')
   })
 })
