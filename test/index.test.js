@@ -1,7 +1,7 @@
-/* eslint-env mocha */
-
 import assert from 'node:assert/strict'
 import fs from 'node:fs'
+import { describe, it } from 'node:test'
+
 import { glob } from 'glob'
 
 import { encode, decode } from '../src/index.js'
