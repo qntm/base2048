@@ -5,8 +5,7 @@ import { genPromise } from '../scripts/gen.js'
 
 describe('gen', () => {
   let gen
-  before(function () {
-    this.timeout(5000)
+  before(() => {
     return genPromise.then(resolved => {
       gen = resolved
     })
