@@ -2,7 +2,7 @@
 
 ## 3.x.x
 
-Support is dropped for Node.js 14, 16 and 18.
+Support is dropped for Node.js 14, 16, 18, 20 and 22.
 
 ## 2.x.x
 
